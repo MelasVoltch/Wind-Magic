@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Magic - Elemental Casting System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🌪️ Wind Magic Casting System</h1>
+            <p class="subtitle">Master the art of elemental wind control</p>
+        </header>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat">
+                <span class="stat-label">Current Level:</span>
+                <span class="stat-value" id="currentLevel">1</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Max Level:</span>
+                <span class="stat-value">10</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Wind Power:</span>
+                <span class="stat-value" id="windPower">10%</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Evolution Stage:</span>
+                <span class="stat-value" id="evolutionStage">Breeze</span>
+            </div>
+        </div>
+
+        <!-- Magic Canvas -->
+        <div class="magic-canvas">
+            <canvas id="windCanvas"></canvas>
+            <div class="energy-core">
+                <div class="core-inner" id="coreInner"></div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="level-control">
+                <label for="magicLevel">Magic Level:</label>
+                <input type="range" id="magicLevel" min="1" max="10" value="1" class="level-slider">
+                <span class="level-display" id="levelDisplay">Level 1</span>
+            </div>
+
+            <div class="button-group">
+                <button class="cast-button" id="castButton">
+                    <span class="button-text">Cast Wind Magic</span>
+                    <span class="button-icon">⚡</span>
+                </button>
+                <button class="evolve-button" id="evolveButton">
+                    <span class="button-text">Evolve Magic</span>
+                    <span class="button-icon">✨</span>
+                </button>
+                <button class="reset-button" id="resetButton">
+                    <span class="button-text">Reset</span>
+                    <span class="button-icon">🔄</span>
+                </button>
+            </div>
+
+            <div class="info-box">
+                <h3>Magic Information</h3>
+                <p id="magicInfo">Wind Breeze (Level 1): Gentle wind flow, basic thrust power. Cast spells to increase mastery!</p>
+            </div>
+        </div>
+
+        <!-- Particle Container -->
+        <div id="particleContainer" class="particle-container"></div>
+
+        <!-- Statistics -->
+        <div class="statistics">
+            <h3>Session Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-name">Spells Cast:</span>
+                    <span class="stat-count" id="spellsCast">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-name">Total Wind Power:</span>
+                    <span class="stat-count" id="totalPower">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-name">Evolutions:</span>
+                    <span class="stat-count" id="evolutionCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
